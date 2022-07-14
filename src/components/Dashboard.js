@@ -100,66 +100,52 @@ export default function OutlinedCard() {
 	return (
 		<>
 			{/* <div className="d-flex bd-highlight example-parent"> */}
-				{/* <Box className="p-2 flex-fill bd-highlight col-example"> */}
-        <Box sx={{display: "flex"}}>
-					<Box sx={{ display: "flex", flexDirection: 'row'}}>
-						<CssBaseline />
-						<AppBar position="fixed" open={open}>
-							<Toolbar>
-								<IconButton
-									color="inherit"
-									aria-label="open drawer"
-									onClick={handleDrawerOpen}
-									edge="start"
-									sx={{ mr: 2, ...(open && { display: "none" }) }}
-								>
-									<MenuIcon />
-								</IconButton>
-								<Typography variant="h6" noWrap component="div">
-									Persistent drawer
-								</Typography>
-							</Toolbar>
-						</AppBar>
-						<Drawer
-							sx={{
+			{/* <Box className="p-2 flex-fill bd-highlight col-example"> */}
+			<Box sx={{ display: "flex" }}>
+				<Box sx={{ display: "flex", flexDirection: "row" }}>
+					<CssBaseline />
+					<AppBar position="fixed" open={open}>
+						<Toolbar>
+							<IconButton
+								color="inherit"
+								aria-label="open drawer"
+								onClick={handleDrawerOpen}
+								edge="start"
+								sx={{ mr: 2, ...(open && { display: "none" }) }}
+							>
+								<MenuIcon />
+							</IconButton>
+							<Typography variant="h6" noWrap component="div">
+								Persistent drawer
+							</Typography>
+						</Toolbar>
+					</AppBar>
+					<Drawer
+						sx={{
+							width: drawerWidth,
+							flexShrink: 0,
+							"& .MuiDrawer-paper": {
 								width: drawerWidth,
-								flexShrink: 0,
-								"& .MuiDrawer-paper": {
-									width: drawerWidth,
-									boxSizing: "border-box",
-								},
-							}}
-							variant="persistent"
-							anchor="left"
-							open={open}
-						>
-							<DrawerHeader>
-								<IconButton onClick={handleDrawerClose}>
-									{theme.direction === "ltr" ? (
-										<ChevronLeftIcon />
-									) : (
-										<ChevronRightIcon />
-									)}
-								</IconButton>
-							</DrawerHeader>
-							<Divider />
-							<List>
-								{["Inbox", "Starred", "Send email", "Drafts"].map(
-									(text, index) => (
-										<ListItem key={text} disablePadding>
-											<ListItemButton>
-												<ListItemIcon>
-													{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-												</ListItemIcon>
-												<ListItemText primary={text} />
-											</ListItemButton>
-										</ListItem>
-									)
+								boxSizing: "border-box",
+							},
+						}}
+						variant="persistent"
+						anchor="left"
+						open={open}
+					>
+						<DrawerHeader>
+							<IconButton onClick={handleDrawerClose}>
+								{theme.direction === "ltr" ? (
+									<ChevronLeftIcon />
+								) : (
+									<ChevronRightIcon />
 								)}
-							</List>
-							<Divider />
-							<List>
-								{["All mail", "Trash", "Spam"].map((text, index) => (
+							</IconButton>
+						</DrawerHeader>
+						<Divider />
+						<List>
+							{["Inbox", "Starred", "Send email", "Drafts"].map(
+								(text, index) => (
 									<ListItem key={text} disablePadding>
 										<ListItemButton>
 											<ListItemIcon>
@@ -168,80 +154,78 @@ export default function OutlinedCard() {
 											<ListItemText primary={text} />
 										</ListItemButton>
 									</ListItem>
-								))}
-							</List>
-						</Drawer>
-						<Main open={open}>
-							<DrawerHeader />
-							<Typography paragraph>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								Rhoncus dolor purus non enim praesent elementum facilisis leo
-								vel. Risus at ultrices mi tempus imperdiet. Semper risus in
-								hendrerit gravida rutrum quisque non tellus. Convallis convallis
-								tellus id interdum velit laoreet id donec ultrices. Odio morbi
-								quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-								adipiscing bibendum est ultricies integer quis. Cursus euismod
-								quis viverra nibh cras. Metus vulputate eu scelerisque felis
-								imperdiet proin fermentum leo. Mauris commodo quis imperdiet
-								massa tincidunt. Cras tincidunt lobortis feugiat vivamus at
-								augue. At augue eget arcu dictum varius duis at consectetur
-								lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-								sapien faucibus et molestie ac.
-							</Typography>
-						</Main>
-					</Box>
+								)
+							)}
+						</List>
+						<Divider />
+						<List>
+							{["All mail", "Trash", "Spam"].map((text, index) => (
+								<ListItem key={text} disablePadding>
+									<ListItemButton>
+										<ListItemIcon>
+											{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+										</ListItemIcon>
+										<ListItemText primary={text} />
+									</ListItemButton>
+								</ListItem>
+							))}
+						</List>
+					</Drawer>
+					<Main open={open}>
+						<DrawerHeader />
+						<Typography paragraph>Lorem</Typography>
+					</Main>
 				</Box>
-				<Box className="p-1 flex-fill bd-highlight col-example">
-					<Card>
-						<Stack direction="column" spacing={1}>
-							<Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-							<Stack direction="row" spacing={2}>
-								<h5>Amit RG</h5>
-							</Stack>
-
-							<Offline>Only shown offline (surprise!)</Offline>
-							<Stack direction="row" spacing={2}>
-								<button>
-									<CallOutlinedIcon></CallOutlinedIcon>Call
-								</button>
-								<button>
-									<AccountCircleIcon></AccountCircleIcon> Profile
-								</button>
-							</Stack>
+			</Box>
+			<Box className="p-1 flex-fill bd-highlight col-example">
+				<Card>
+					<Stack direction="column" spacing={1}>
+						<Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+						<Stack direction="row" spacing={2}>
+							<h5>Amit RG</h5>
 						</Stack>
-					</Card>
-					<Card>
-						<CardContent>
-							<Stack direction="row" spacing={2}>
-								<Typography variant="h6" component="div">
-									Customer details
-								</Typography>
-							</Stack>
-							<Stack direction="row" spacing={2}>
-								<Typography sx={{ mb: 1.5 }} color="text.secondary">
-									Email
-								</Typography>
-								<h7>amit@richpanel.com</h7>
-							</Stack>
-							<Stack direction="row" spacing={2}>
-								<Typography sx={{ mb: 1.5 }} color="text.secondary">
-									First Name
-								</Typography>
-								<h6>Amit</h6>
-							</Stack>
-							<Stack direction="row" spacing={4}>
-								<Typography sx={{ mb: 1.5 }} color="text.secondary">
-									Last Name
-								</Typography>
-								<h7>RG</h7>
-							</Stack>
-						</CardContent>
-						<CardActions>
-							<Button size="small">View more details</Button>
-						</CardActions>
-					</Card>
-				</Box>
+
+						<Stack direction="row" spacing={2}>
+							<button>
+								<CallOutlinedIcon></CallOutlinedIcon>Call
+							</button>
+							<button>
+								<AccountCircleIcon></AccountCircleIcon> Profile
+							</button>
+						</Stack>
+					</Stack>
+				</Card>
+				<Card>
+					<CardContent>
+						<Stack direction="row" spacing={2}>
+							<Typography variant="h6" component="div">
+								Customer details
+							</Typography>
+						</Stack>
+						<Stack direction="row" spacing={2}>
+							<Typography sx={{ mb: 1.5 }} color="text.secondary">
+								Email
+							</Typography>
+							<h7>amit@richpanel.com</h7>
+						</Stack>
+						<Stack direction="row" spacing={2}>
+							<Typography sx={{ mb: 1.5 }} color="text.secondary">
+								First Name
+							</Typography>
+							<h6>Amit</h6>
+						</Stack>
+						<Stack direction="row" spacing={4}>
+							<Typography sx={{ mb: 1.5 }} color="text.secondary">
+								Last Name
+							</Typography>
+							<h7>RG</h7>
+						</Stack>
+					</CardContent>
+					<CardActions>
+						<Button size="small">View more details</Button>
+					</CardActions>
+				</Card>
+			</Box>
 			{/* </div> */}
 		</>
 	);
