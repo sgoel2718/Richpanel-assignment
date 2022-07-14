@@ -18,9 +18,9 @@ import Stack from "@mui/material/Stack";
 import { Offline } from "react-detect-offline";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import InboxIcon from '@mui/icons-material/Inbox';
-import GroupIcon from '@mui/icons-material/Group';
-import ShareIcon from '@mui/icons-material/Share';
+import InboxIcon from "@mui/icons-material/Inbox";
+import GroupIcon from "@mui/icons-material/Group";
+import ShareIcon from "@mui/icons-material/Share";
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -65,7 +65,7 @@ const MenuBar = () => {
 	return (
 		<>
 			<Box sx={{ display: "flex", height: "70em" }}>
-				<Container maxWidth="xl" sx={{paddingRight: '0'}}>
+				<Container maxWidth="xl" sx={{ paddingRight: "0" }}>
 					<Box sx={{ display: "flex" }}>
 						<Box sx={{ maxWidth: "lg" }}>
 							<Box
@@ -76,12 +76,16 @@ const MenuBar = () => {
 									// height: 224,
 								}}
 							>
-								<Tabs 
+								<Tabs
 									orientation="vertical"
 									value={value}
 									onChange={handleChange}
 									aria-label="Vertical tabs example"
-									sx={{ borderRight: 1, borderColor: "divider", backgroundColor: "" }}
+									sx={{
+										borderRight: 1,
+										borderColor: "divider",
+										backgroundColor: "",
+									}}
 								>
 									<Tab icon={<InboxIcon />} {...a11yProps(0)} />
 									<Tab icon={<GroupIcon />} {...a11yProps(1)} />
@@ -95,13 +99,13 @@ const MenuBar = () => {
 											bgcolor: "background.paper",
 										}}
 									>
-                    <ListItem alignItems="flex-start">
-                        <ListItemText>
-                            <Typography>
-                                <h2>Conversations</h2>
-                            </Typography>
-                        </ListItemText>
-                    </ListItem>
+										<ListItem alignItems="flex-start">
+											<ListItemText>
+												<Typography>
+													<h2>Conversations</h2>
+												</Typography>
+											</ListItemText>
+										</ListItem>
 										<ListItem alignItems="flex-start">
 											<Checkbox></Checkbox>
 											<ListItemText
@@ -125,7 +129,7 @@ const MenuBar = () => {
 										</ListItem>
 										<Divider variant="inset" component="li" />
 										<ListItem alignItems="flex-start">
-                    <Checkbox></Checkbox>
+											<Checkbox></Checkbox>
 											<ListItemText
 												primary="Summer BBQ"
 												secondary={
@@ -145,7 +149,7 @@ const MenuBar = () => {
 										</ListItem>
 										<Divider variant="inset" component="li" />
 										<ListItem alignItems="flex-start">
-                    <Checkbox></Checkbox>
+											<Checkbox></Checkbox>
 											<ListItemText
 												primary="Oui Oui"
 												secondary={
@@ -190,17 +194,17 @@ const MenuBar = () => {
 						<Box sx={{ flexGrow: "1" }}>
 							<Box sx={{ display: "flex", flexDirection: "column" }}>
 								<Box sx={{ bgcolor: "red" }}>
-									<h1> hello</h1>
+									<h1> Hello</h1>
 								</Box>
 								<Box sx={{ bgcolor: "black" }}>
-									<h2>world</h2>
+									<h2>World</h2>
 								</Box>
 							</Box>
 						</Box>
 					</Box>
 				</Container>
-				<Container maxWidth="xs" sx={{paddingLeft: '0'}}>
-        <Card>
+				<Container maxWidth="xs" sx={{ paddingLeft: "0" }}>
+					<Card>
 						<Stack direction="column" spacing={1}>
 							<Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
 							<Stack direction="row" spacing={2}>
